@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bviksu5ntik0e"]
+
+[ext_resource type="Script" path="res://scripts/death.gd" id="1_hw3km"]
+
+[node name="death" type="Area2D"]
+script = ExtResource("1_hw3km")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

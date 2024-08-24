@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://btt4kft0sv4ex"]
+
+[ext_resource type="Texture2D" uid="uid://fax7g4yf2bt1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap.png" id="1_4gkt7"]
+[ext_resource type="Script" path="res://scripts/lock.gd" id="2_p84ta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywgcu"]
+size = Vector2(20, 18)
+
+[node name="lock" type="Area2D"]
+script = ExtResource("2_p84ta")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4gkt7")
+region_enabled = true
+region_rect = Rect2(152, 19, 18, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ywgcu")
+
+[node name="keytimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="leveltimer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="keytimer" to="." method="_on_keytimer_timeout"]
+[connection signal="timeout" from="leveltimer" to="." method="_on_leveltimer_timeout"]
