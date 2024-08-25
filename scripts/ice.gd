@@ -12,7 +12,5 @@ func _on_body_exited(body):
 		$Timer.start()
 		#body.play_anim("walk")
 		
-
-
 func _on_timer_timeout():
 	%player.play_anim("walk")
