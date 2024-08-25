@@ -16,6 +16,7 @@ func _on_keytimer_timeout():
 
 func _on_leveltimer_timeout():
 	if %player.has_key() == true:
-		get_tree().change_scene_to_file("res://scenes/world_2.tscn")
+		get_tree().change_scene_to_file("res://scenes/world.tscn")
 	else:
 		pass
+
