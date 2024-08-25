@@ -113,8 +113,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h65dj"]
-height = 24.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vkdn7"]
+height = 22.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_fchnl")
@@ -128,4 +128,4 @@ autoplay = "walk"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_h65dj")
+shape = SubResource("CapsuleShape2D_vkdn7")
