@@ -18,11 +18,14 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	jump()
-
+	
 	
 func handle_input() -> Vector2:
 	var direction = Vector2.ZERO
-	direction.x = Input.get_axis('ui_left', 'ui_right')
+	if Input.is_action_pressed('ui_left'):
+		direction.x = -1
+	else:
+		direction.x = 1#Input.get_axis('ui_left', 'ui_right')
 	if direction.x < 0:
 		$AnimatedSprite2D.flip_h = false
 		

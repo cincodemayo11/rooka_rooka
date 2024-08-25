@@ -808,7 +808,7 @@ editor_draw_drag_margin = true
 
 [node name="key" parent="." instance=ExtResource("3_bl01p")]
 unique_name_in_owner = true
-position = Vector2(186, -40)
+position = Vector2(354, 18)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="key"]
 shape = SubResource("CircleShape2D_5u0t6")

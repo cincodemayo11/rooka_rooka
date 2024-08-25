@@ -9,7 +9,7 @@ func _on_body_entered(body):
 
 func _on_keytimer_timeout():
 	if %player.has_key():
-			%key.queue_free()
+		%key.queue_free()
 	else:
 		pass
 
