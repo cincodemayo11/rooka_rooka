@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bay5r4d625ssw"]
+
+[ext_resource type="AudioStream" uid="uid://qj81mk34pyiv" path="res://AGST - Soon (Royalty Free Music) - Epidemic Arcade.mp3" id="1_ix2gm"]
+
+[node name="background_music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ix2gm")
+autoplay = true

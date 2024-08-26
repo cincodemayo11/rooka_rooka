@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qj81mk34pyiv"
+path="res://.godot/imported/AGST - Soon (Royalty Free Music) - Epidemic Arcade.mp3-ed63ff27a57977ff292e415e801a4f84.mp3str"
+
+[deps]
+
+source_file="res://AGST - Soon (Royalty Free Music) - Epidemic Arcade.mp3"
+dest_files=["res://.godot/imported/AGST - Soon (Royalty Free Music) - Epidemic Arcade.mp3-ed63ff27a57977ff292e415e801a4f84.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://qjncj07kuq2m"]
+[gd_scene load_steps=3 format=3 uid="uid://qjncj07kuq2m"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_n4op8"]
+[ext_resource type="Texture2D" uid="uid://deyt225id5gm3" path="res://RookaRooka3.png" id="2_ms8qh"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -35,6 +36,13 @@ text = "Level Select
 layout_mode = 2
 text = "Quit
 "
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(344, -6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ms8qh")
+centered = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/select_levels" to="." method="_on_select_levels_pressed"]

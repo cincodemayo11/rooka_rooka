@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://d0032kbv27rb2"]
 
 [ext_resource type="Texture2D" uid="uid://fax7g4yf2bt1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap.png" id="1_dymam"]
-[ext_resource type="Script" path="res://scenes/world.gd" id="1_jisrt"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_jisrt"]
 [ext_resource type="PackedScene" uid="uid://bhaop1ncy7h2x" path="res://scenes/player.tscn" id="2_p2g7r"]
 [ext_resource type="Texture2D" uid="uid://bpxw1wmb1vpa1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap-backgrounds.png" id="2_sw37j"]
 [ext_resource type="PackedScene" uid="uid://bviksu5ntik0e" path="res://scenes/death.tscn" id="4_eonl3"]

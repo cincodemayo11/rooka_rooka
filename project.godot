@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="FW"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BackgroundMusic="*res://scenes/background_music.tscn"
 
 [display]
 
