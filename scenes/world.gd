@@ -5,16 +5,18 @@ extends Node2D
 var paused = false
 
 func _process(delta):
-	if Input.is_action_just_pressed("Pause") and paused == false:
-		paused = true
+	if Input.is_action_just_pressed("Pause"):
+		pause()
 		
-		Engine.time_scale = 0
-	elif Input.is_action_just_pressed("Pause") and paused == true:
-		paused = false
-		#pause_menu.hide()
-		Engine.time_scale = 1
-	
-	if paused == true:
-		pause_menu.show()
-	else:
+func pause():
+	if paused:
 		pause_menu.hide()
+		Engine.time_scale = 1
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+		
+	paused = !paused
+		
+		
+		

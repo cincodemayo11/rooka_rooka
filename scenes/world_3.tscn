@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0032kbv27rb2"]
+[gd_scene load_steps=19 format=3 uid="uid://d0032kbv27rb2"]
 
 [ext_resource type="Texture2D" uid="uid://fax7g4yf2bt1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap.png" id="1_dymam"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_jisrt"]
 [ext_resource type="PackedScene" uid="uid://bhaop1ncy7h2x" path="res://scenes/player.tscn" id="2_p2g7r"]
 [ext_resource type="Texture2D" uid="uid://bpxw1wmb1vpa1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap-backgrounds.png" id="2_sw37j"]
 [ext_resource type="PackedScene" uid="uid://bviksu5ntik0e" path="res://scenes/death.tscn" id="4_eonl3"]
@@ -8,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/lock3.gd" id="5_tohau"]
 [ext_resource type="PackedScene" uid="uid://btt4kft0sv4ex" path="res://scenes/lock.tscn" id="7_dx8ao"]
 [ext_resource type="Texture2D" uid="uid://dy8phxerlsi87" path="res://kenney_pixel-platformer(1)/Tilemap/desert.png" id="8_qn7wu"]
+[ext_resource type="PackedScene" uid="uid://b00824o2ls1xf" path="res://scenes/pause.tscn" id="10_qifa0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72hur"]
 texture = ExtResource("1_dymam")
@@ -918,7 +920,8 @@ size = Vector2(401, 75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_olpqe"]
 size = Vector2(79, 75)
 
-[node name="world2" type="Node2D"]
+[node name="world3" type="Node2D"]
+script = ExtResource("1_jisrt")
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -4
@@ -993,3 +996,12 @@ texture_filter = 1
 position = Vector2(0, -496)
 texture = ExtResource("8_qn7wu")
 centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("10_qifa0")]
+visible = false
+offset_left = 400.0
+offset_top = 300.0
+offset_right = 400.0
+offset_bottom = 300.0

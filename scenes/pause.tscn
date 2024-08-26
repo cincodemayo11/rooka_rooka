@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b00824o2ls1xf"]
 
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_q7h6v"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="1_uq3di"]
 
 [node name="pause_menu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_q7h6v")
+script = ExtResource("1_uq3di")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -30,8 +30,7 @@ text = "Main menu
 
 [node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "quit
-"
+text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]

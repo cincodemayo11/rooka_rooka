@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://caxbmyx47kgk7"]
+[gd_scene load_steps=23 format=3 uid="uid://caxbmyx47kgk7"]
 
 [ext_resource type="Texture2D" uid="uid://fax7g4yf2bt1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap.png" id="1_daaki"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_kcy1t"]
 [ext_resource type="PackedScene" uid="uid://bhaop1ncy7h2x" path="res://scenes/player.tscn" id="2_nfb5m"]
 [ext_resource type="PackedScene" uid="uid://duk10gfjghvu4" path="res://scenes/ice.tscn" id="3_biw2m"]
 [ext_resource type="PackedScene" uid="uid://bviksu5ntik0e" path="res://scenes/death.tscn" id="3_tao08"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dxv5opyko225e" path="res://kenney_pixel-platformer(1)/Tilemap/ice platform.png" id="6_m3nxg"]
 [ext_resource type="Script" path="res://scripts/lock2.gd" id="8_hcvfy"]
 [ext_resource type="Texture2D" uid="uid://defbl42vk0ie2" path="res://kenney_pixel-platformer(1)/Tilemap/background_glacial_mountains.png" id="9_w3eor"]
+[ext_resource type="PackedScene" uid="uid://b00824o2ls1xf" path="res://scenes/pause.tscn" id="10_msbsi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ad4gu"]
 texture = ExtResource("1_daaki")
@@ -802,6 +804,7 @@ _data = {
 size = Vector2(18, 19)
 
 [node name="world2" type="Node2D"]
+script = ExtResource("1_kcy1t")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(1.00038, 0.989443)
@@ -885,5 +888,14 @@ texture_filter = 1
 position = Vector2(0, -514)
 texture = ExtResource("9_w3eor")
 centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("10_msbsi")]
+visible = false
+offset_left = 400.0
+offset_top = 300.0
+offset_right = -520.0
+offset_bottom = -340.0
 
 [editable path="player"]
