@@ -1,13 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://3pm22wghtioy"]
+[gd_scene load_steps=21 format=3 uid="uid://3pm22wghtioy"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_8kgne"]
 [ext_resource type="Texture2D" uid="uid://fax7g4yf2bt1" path="res://kenney_pixel-platformer(1)/Tilemap/tilemap.png" id="1_jnhow"]
 [ext_resource type="PackedScene" uid="uid://bhaop1ncy7h2x" path="res://scenes/player.tscn" id="2_2elh2"]
 [ext_resource type="PackedScene" uid="uid://d0alreeplj6dn" path="res://scenes/key.tscn" id="3_bl01p"]
 [ext_resource type="PackedScene" uid="uid://bviksu5ntik0e" path="res://scenes/death.tscn" id="4_ojenb"]
+[ext_resource type="PackedScene" uid="uid://b00824o2ls1xf" path="res://scenes/pause.tscn" id="5_0itac"]
 [ext_resource type="PackedScene" uid="uid://duk10gfjghvu4" path="res://scenes/ice.tscn" id="5_pwy8w"]
 [ext_resource type="PackedScene" uid="uid://btt4kft0sv4ex" path="res://scenes/lock.tscn" id="6_t6qfq"]
-
-[sub_resource type="GDScript" id="GDScript_jfl6r"]
+[ext_resource type="Texture2D" uid="uid://cwdu174tuqk80" path="res://kenney_pixel-platformer(1)/Tilemap/forest.png" id="7_d5ag2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgm57"]
 texture = ExtResource("1_jnhow")
@@ -783,7 +784,7 @@ size = Vector2(503, 78.5)
 size = Vector2(18, 19)
 
 [node name="world" type="Node2D"]
-script = SubResource("GDScript_jfl6r")
+script = ExtResource("1_8kgne")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -866,3 +867,18 @@ position = Vector2(1686, 24)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lock/RigidBody2D"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_1lmnv")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(0, -388)
+texture = ExtResource("7_d5ag2")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("5_0itac")]
+metadata/_edit_use_anchors_ = true
